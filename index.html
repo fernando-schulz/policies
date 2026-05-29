@@ -3,29 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>schulz-video-generator</title>
+  <title>schulz-video-generator — Automated Short-Form Video Publishing</title>
   <link rel="icon" type="image/svg+xml" href="icon.svg">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f9f9fb; color: #1a1a2e; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; }
-    .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 48px 40px; max-width: 420px; width: 100%; text-align: center; }
-    .card img { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 20px; }
-    .card h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
-    .card p { font-size: 0.9rem; color: #666; margin-bottom: 32px; line-height: 1.6; }
-    .links { display: flex; flex-direction: column; gap: 12px; }
-    .links a { display: block; padding: 12px 20px; background: linear-gradient(135deg, #1a0533, #5b1fa0); color: #fff; text-decoration: none; border-radius: 10px; font-size: 0.95rem; font-weight: 600; transition: opacity 0.15s; }
-    .links a:hover { opacity: 0.88; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f9f9fb; color: #1a1a2e; line-height: 1.7; }
+
+    /* Nav */
+    nav { background: #fff; border-bottom: 1px solid #ececec; padding: 14px 32px; display: flex; align-items: center; gap: 12px; }
+    nav img { width: 36px; height: 36px; border-radius: 8px; }
+    nav span { font-weight: 700; font-size: 1rem; color: #1a0533; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #1a0533 0%, #5b1fa0 100%); color: #fff; padding: 72px 24px 64px; text-align: center; }
+    .hero img { width: 88px; height: 88px; border-radius: 20px; margin-bottom: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); }
+    .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 12px; }
+    .hero p { font-size: 1.05rem; opacity: 0.85; max-width: 520px; margin: 0 auto; }
+
+    /* Features */
+    .features { max-width: 860px; margin: 0 auto; padding: 60px 24px; }
+    .features h2 { font-size: 1.4rem; font-weight: 700; color: #1a0533; text-align: center; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .card { background: #fff; border-radius: 14px; padding: 28px 24px; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+    .card .icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .card h3 { font-size: 1rem; font-weight: 700; color: #1a0533; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: #555; }
+
+    /* Platforms */
+    .platforms { background: #fff; padding: 48px 24px; text-align: center; border-top: 1px solid #ececec; }
+    .platforms h2 { font-size: 1.2rem; font-weight: 700; color: #1a0533; margin-bottom: 8px; }
+    .platforms p { font-size: 0.9rem; color: #666; margin-bottom: 24px; }
+    .platform-list { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; font-weight: 600; font-size: 0.95rem; color: #5b1fa0; }
+
+    /* Contact */
+    .contact { max-width: 560px; margin: 0 auto; padding: 60px 24px; text-align: center; }
+    .contact h2 { font-size: 1.2rem; font-weight: 700; color: #1a0533; margin-bottom: 12px; }
+    .contact p { font-size: 0.95rem; color: #555; margin-bottom: 20px; }
+    .contact a.btn { display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #1a0533, #5b1fa0); color: #fff; text-decoration: none; border-radius: 10px; font-weight: 600; font-size: 0.95rem; }
+
+    /* Footer */
+    footer { background: #1a0533; color: rgba(255,255,255,0.5); text-align: center; font-size: 0.82rem; padding: 28px 24px; }
+    footer a { color: rgba(255,255,255,0.7); margin: 0 10px; text-decoration: none; }
+    footer a:hover { color: #fff; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="icon.svg" alt="schulz-video-generator">
-    <h1>schulz-video-generator</h1>
-    <p>A personal automation tool for generating and publishing short-form video content to social media platforms.</p>
-    <div class="links">
-      <a href="privacy.html/">Privacy Policy</a>
-      <a href="terms.html/">Terms of Service</a>
+
+<nav>
+  <img src="icon.svg" alt="schulz-video-generator">
+  <span>schulz-video-generator</span>
+</nav>
+
+<section class="hero">
+  <img src="icon.svg" alt="schulz-video-generator">
+  <h1>schulz-video-generator</h1>
+  <p>An automation tool for generating and publishing short-form video content across multiple social media platforms.</p>
+</section>
+
+<section class="features">
+  <h2>What It Does</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h3>Automated Video Generation</h3>
+      <p>Generates short-form videos from scripts, combining AI voiceover, images, and background music automatically.</p>
+    </div>
+    <div class="card">
+      <div class="icon">📅</div>
+      <h3>Multi-Platform Scheduling</h3>
+      <p>Schedules and publishes content to TikTok, YouTube Shorts, and Instagram Reels on a configurable posting calendar.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Secure OAuth Integration</h3>
+      <p>Connects to platforms via official OAuth 2.0 flows. Tokens are stored locally and never shared with third parties.</p>
+    </div>
+    <div class="card">
+      <div class="icon">⚡</div>
+      <h3>End-to-End Pipeline</h3>
+      <p>From script to published video: text-to-speech, subtitle generation, thumbnail creation, and upload — fully automated.</p>
     </div>
   </div>
+</section>
+
+<section class="platforms">
+  <h2>Platform Integrations</h2>
+  <p>Publishes content through official APIs to the following platforms:</p>
+  <div class="platform-list">
+    <span>TikTok</span>
+    <span>YouTube Shorts</span>
+    <span>Instagram Reels</span>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>For questions about this application, its data practices, or its platform integrations, please reach out via email.</p>
+  <a class="btn" href="mailto:fsmedia1990@gmail.com">fsmedia1990@gmail.com</a>
+</section>
+
+<footer>
+  <p>
+    &copy; 2026 schulz-video-generator &nbsp;|&nbsp;
+    <a href="privacy.html/">Privacy Policy</a>
+    <a href="terms.html/">Terms of Service</a>
+  </p>
+</footer>
+
 </body>
 </html>
