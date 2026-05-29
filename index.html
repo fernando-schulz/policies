@@ -3,18 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Generator — Policies</title>
+  <title>schulz-video-generator</title>
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 60px auto; padding: 0 20px; color: #222; }
-    a { color: #0066cc; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f9f9fb; color: #1a1a2e; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 24px; }
+    .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 48px 40px; max-width: 420px; width: 100%; text-align: center; }
+    .card img { width: 72px; height: 72px; border-radius: 16px; margin-bottom: 20px; }
+    .card h1 { font-size: 1.3rem; font-weight: 700; margin-bottom: 8px; }
+    .card p { font-size: 0.9rem; color: #666; margin-bottom: 32px; line-height: 1.6; }
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    .links a { display: block; padding: 12px 20px; background: linear-gradient(135deg, #1a0533, #5b1fa0); color: #fff; text-decoration: none; border-radius: 10px; font-size: 0.95rem; font-weight: 600; transition: opacity 0.15s; }
+    .links a:hover { opacity: 0.88; }
   </style>
 </head>
 <body>
-  <h1>Video Generator</h1>
-  <p>This is a personal automation tool for creating and publishing short-form video content.</p>
-  <ul>
-    <li><a href="terms.html">Terms of Service</a></li>
-    <li><a href="privacy.html">Privacy Policy</a></li>
-  </ul>
+  <div class="card">
+    <img src="icon.svg" alt="schulz-video-generator">
+    <h1>schulz-video-generator</h1>
+    <p>A personal automation tool for generating and publishing short-form video content to social media platforms.</p>
+    <div class="links">
+      <a href="privacy.html/">Privacy Policy</a>
+      <a href="terms.html/">Terms of Service</a>
+    </div>
+  </div>
 </body>
 </html>
